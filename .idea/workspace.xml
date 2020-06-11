@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6be86504-0a82-4ddb-ada7-3c7e0746fa40" name="Default Changelist" comment="" />
+    <list default="true" id="6be86504-0a82-4ddb-ada7-3c7e0746fa40" name="Default Changelist" comment="Comentarios traduzidos">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ball_tracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/ball_tracking.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +19,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Adrianozk &lt;37816785+adrianozk@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aihWm16JqFQbPCTleh84IlOCK9" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/ball_tracking" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Documentos/rd_server" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -66,6 +79,31 @@
       <option name="presentableId" value="Default" />
       <updated>1587224355802</updated>
     </task>
+    <task id="LOCAL-00001" summary="Comentarios traduzidos">
+      <created>1591481692909</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591481692909</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Comentarios traduzidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios traduzidos" />
   </component>
 </project>
