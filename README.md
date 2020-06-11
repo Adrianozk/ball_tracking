@@ -8,7 +8,7 @@ Isto será feito seguindo o artigo https://www.pyimagesearch.com/2015/09/14/ball
 O intuito é demonstrar em tempo real o funcionamento da ferramenta e expor a testes em que a bola esteja 100% visível e em outros momentos ocultadas do campo de visão da webcam.  
   
 __Participantes__
-João Gabriel Oliveira
+João Gabriel Oliveira  
 Victor Barbosa de Santana  
 Luiz Gustavo Moreira de Oliveira  
 Adriano Luís Fernandes  
