@@ -6,7 +6,10 @@ O presente trabalho visa contribuir para o estudo de novas tecnologias como o de
 Isto será feito seguindo o artigo https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/, publicado no site www.pyimagesearch.com  
   
 O intuito é demonstrar em tempo real o funcionamento da ferramenta e expor a testes em que a bola esteja 100% visível e em outros momentos ocultadas do campo de visão da webcam.  
-  
+
+__Apresentação__
+A apresentação do trabalho foi publicada no youtube no link: https://youtu.be/4CUJade8Kb4  
+
 __Participantes__  
 João Gabriel Oliveira  
 Victor Barbosa de Santana  
