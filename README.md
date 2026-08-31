@@ -2,11 +2,13 @@
 
 Projeto acadêmico de visão computacional que identifica uma bola pela cor, acompanha seu movimento em vídeo e desenha a trajetória recente do objeto em tempo real.
 
-![Exemplo do projeto](image.png)
-
 ## Demonstração
 
-A apresentação e a execução do projeto estão disponíveis no [YouTube](https://youtu.be/4CUJade8Kb4).
+<p align="center">
+  <img src="docs/images/tracking-demo.gif" alt="Demonstração do rastreamento da bola e da trajetória em tempo real" width="720">
+</p>
+
+A apresentação completa e a execução do projeto estão disponíveis no [YouTube](https://youtu.be/4CUJade8Kb4).
 
 ## Como funciona
 
@@ -17,6 +19,22 @@ A apresentação e a execução do projeto estão disponíveis no [YouTube](http
 5. Aplica erosão e dilatação para reduzir ruídos.
 6. Encontra o maior contorno e calcula seu centro.
 7. Armazena as posições recentes e desenha a trajetória.
+
+### Calibração HSV e geração da máscara
+
+O utilitário `range_detector.py` permite ajustar interativamente os limites HSV. A imagem abaixo reúne o frame original, a máscara binária e os controles usados na calibração da bola:
+
+<p align="center">
+  <img src="docs/images/hsv-calibration.png" alt="Calibração HSV com imagem original, máscara binária e controles" width="900">
+</p>
+
+### Resultado do rastreamento
+
+Depois da segmentação, o maior contorno é usado para calcular o círculo, o centróide e a sequência de posições que forma o rastro:
+
+<p align="center">
+  <img src="docs/images/tracking-result.png" alt="Resultado final com bola detectada, centróide e trajetória" width="720">
+</p>
 
 ## Tecnologias
 
@@ -43,8 +61,6 @@ No Windows, ative o ambiente virtual com:
 ```
 
 ## Calibração da cor
-
-O script `range_detector.py` ajuda a descobrir os limites mínimo e máximo de RGB ou HSV adequados ao objeto e à iluminação do ambiente.
 
 Com a webcam:
 
