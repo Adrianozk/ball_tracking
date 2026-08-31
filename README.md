@@ -62,6 +62,8 @@ No Windows, ative o ambiente virtual com:
 
 ## Calibração da cor
 
+Faça a calibração com o mesmo objeto, câmera e iluminação que serão usados no rastreamento.
+
 Com a webcam:
 
 ```bash
@@ -74,7 +76,50 @@ Com uma imagem:
 python range_detector.py --filter HSV --image image.png --preview
 ```
 
-Após identificar os valores adequados, ajuste as variáveis `lower` e `upper` em `ball_tracking.py`.
+A janela **Trackbars** exibe seis controles:
+
+| Controle | Função |
+| --- | --- |
+| `H_MIN` e `H_MAX` | Delimitam a tonalidade da cor. No OpenCV, o canal H útil vai de 0 a 179. |
+| `S_MIN` e `S_MAX` | Delimitam a saturação. Aumentar `S_MIN` ajuda a excluir regiões cinzas, brancas ou pouco coloridas. |
+| `V_MIN` e `V_MAX` | Delimitam o brilho. Aumentar `V_MIN` ajuda a excluir regiões escuras. |
+
+### Como ajustar
+
+1. Comece com os mínimos em `0` e os máximos em `255`.
+2. Ajuste primeiro `H_MIN` e `H_MAX` até isolar a cor da bola.
+3. Aumente `S_MIN` para remover regiões com pouca saturação.
+4. Aumente `V_MIN` para remover sombras e regiões escuras.
+5. Normalmente, `S_MAX` e `V_MAX` podem permanecer em `255`.
+6. Procure deixar a bola inteira visível e contínua, com o restante da imagem preto. Pequenos pontos isolados podem prejudicar a detecção.
+7. Anote os seis valores e pressione `q` para encerrar.
+
+Com `--preview`, os pixels aceitos mantêm a cor original e o restante fica preto. Sem essa opção, o programa mostra também a máscara binária na janela **Thresh**.
+
+### Aplicando os valores ao rastreador
+
+Abra `ball_tracking.py` e localize estas variáveis:
+
+```python
+lower = (2, 139, 98)
+upper = (33, 255, 197)
+```
+
+Substitua-as usando esta correspondência:
+
+```python
+lower = (H_MIN, S_MIN, V_MIN)
+upper = (H_MAX, S_MAX, V_MAX)
+```
+
+Por exemplo, se o calibrador indicar `H_MIN=0`, `S_MIN=56`, `V_MIN=109`, `H_MAX=7`, `S_MAX=165` e `V_MAX=255`, configure:
+
+```python
+lower = (0, 56, 109)
+upper = (7, 165, 255)
+```
+
+Os valores podem precisar de nova calibração quando a câmera, o objeto ou a iluminação forem alterados.
 
 ## Execução
 
